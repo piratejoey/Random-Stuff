@@ -28,6 +28,10 @@ def RPS(user):
 	else:
 		return draw
 
+
+
+
+
 while True:
 	user = raw_input("Choose either rock, paper, or scissors")
 	if RPS(user) == win:
@@ -48,3 +52,4 @@ while True:
 			comp = 'rock'
 	elif RPS(user) == draw:
 	    comp = random.choice(selection) ; print "Tie"
+	
