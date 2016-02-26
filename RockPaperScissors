@@ -1,0 +1,50 @@
+import random
+
+selection = ['rock', 'paper', 'scissors']
+comp = random.choice(selection)
+
+
+lose = 0
+win = 1
+draw = 3
+
+def RPS(user):
+	if user != comp:
+		if user == "rock":
+			if comp == "paper":
+				return lose
+			elif comp == 'scissors':
+				return win
+		elif user == 'paper':
+			if comp == 'scissors':
+				return lose
+			elif comp == 'rock':
+				return win
+		else:
+			if comp == 'rock':
+				return lose
+			if comp == 'paper':
+				return win
+	else:
+		return draw
+
+while True:
+	user = raw_input("Choose either rock, paper, or scissors")
+	if RPS(user) == win:
+		print "You Win"
+		if user == 'rock':
+			comp = 'paper'
+		elif user == 'paper':
+			comp = 'scissors'
+		else:
+			comp = 'rock'
+	elif RPS(user) == lose:
+		print "You Lose"
+		if comp == 'rock':
+			comp = 'paper'
+		elif comp == 'paper':
+			comp = 'scissors'
+		else:
+			comp = 'rock'
+	elif RPS(user) == draw:
+	    comp = random.choice(selection) ; print "Tie"
