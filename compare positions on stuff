@@ -1,0 +1,43 @@
+#two ways to do the same thing
+
+
+def dict1(text1):
+    dict1 = {}
+    for num in range(len(text1)):
+        dict1[num] = text1[num]
+    return dict1
+    
+
+def dict2(text2):
+    dict2 = {}
+    for num in range(len(text2)):
+        dict2[num] = text2[num]
+    return dict2
+
+def compare(first, second, position):
+    if first.get(position) == second.get(position):
+        return True
+    else: return False
+            
+
+
+dict1 = dict1("abcffdsa")
+dict2 = dict2("abcffdsb")
+
+print compare(dict1, dict2, 7)
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+def compare(text1, text2, pos):
+    if text1[pos] == text2[pos]:
+        return True
+    else: return False
+    
+    
+print compare("jklfdda","fdsafds", 5)
